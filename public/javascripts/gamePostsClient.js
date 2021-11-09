@@ -1,24 +1,24 @@
 // Holds the container for all the game posts
 const gamePostsContainer = document.querySelector("#gamePostsContainer");
 
-// Images object contains key value pairs associating the category name (as the key) with 
-// the image name (as the value) 
-const images = { 
-  "Adventure": "adventureImage",
+// Images object contains key value pairs associating the category name (as the key) with
+// the image name (as the value)
+const images = {
+  Adventure: "adventureImage",
   "Battle Royale": "battleRoyaleImage",
-  "Fighting": "fightingImage", 
-  "Platform": "platformImage",
-  "Racing": "racingImage",
-  "Rhythm": "rhythmImage",
-  "RPG": "rpgImage",
-  "Sandbox": "sandboxImage",
-  "Shooter": "shooterImage", 
-  "Stealth": "stealthImage",
-  "Strategy": "strategyImage",
-  "Survival": "survivalImage" 
+  Fighting: "fightingImage",
+  Platform: "platformImage",
+  Racing: "racingImage",
+  Rhythm: "rhythmImage",
+  RPG: "rpgImage",
+  Sandbox: "sandboxImage",
+  Shooter: "shooterImage",
+  Stealth: "stealthImage",
+  Strategy: "strategyImage",
+  Survival: "survivalImage",
 };
 
-// This function is responsible for loading game posts from 
+// This function is responsible for loading game posts from
 // server-side to frontend
 async function loadGamePosts() {
   // Fetch response data from server-side as raw data
@@ -32,13 +32,35 @@ async function loadGamePosts() {
   const resData = await resRawData.json();
   console.log("Got all game posts ", resData);
 
-  // Get gamePosts array from resData Object
-  // For each game post in the gamePosts array, we pass the game post as
-  // a param to createGamePostCard function. 
-  resData.gamePosts.forEach(createGamePostCard);
+  // If resData.gamePosts array is empty we call createNoGamePosts function
+  if (!resData.gamePosts.length) {
+    //console.log("Called");
+    createNoGamePosts();
+  }
+
+  // Otherwise, we call createGamePostCard for each game post
+  // in gamePosts array
+  else {
+    // Get gamePosts array from resData Object
+    // For each game post in the gamePosts array, we pass the game post as
+    // a param to createGamePostCard function.
+    resData.gamePosts.forEach(createGamePostCard);
+  }
 }
 
-// This function is responsible for creating and rendering the game post 
+// This function is responsible for creating no game posts div if
+// there aren't any game posts.
+function createNoGamePosts() {
+  const gamePostsRowDiv = document.createElement("div");
+  gamePostsRowDiv.className = "row gamePostsRow";
+  const noGamePostsDiv = document.createElement("div");
+  noGamePostsDiv.className = "noGamePosts";
+  noGamePostsDiv.innerText = "No game posts";
+  gamePostsRowDiv.appendChild(noGamePostsDiv);
+  gamePostsContainer.appendChild(gamePostsRowDiv);
+}
+
+// This function is responsible for creating and rendering the game post
 // cards in the frontend.
 function createGamePostCard(gamePost) {
   const gamePostsRowDiv = document.createElement("div");
@@ -57,13 +79,13 @@ function createGamePostCard(gamePost) {
   postUserDiv.innerText = `Posted by ${gamePost.createdBy}`;
 
   // This is for rendering certain attributes of the game post
-  // card after a user submits a game post 
+  // card after a user submits a game post
   const postTitleDiv = document.createElement("div");
   postTitleDiv.className = "postTitle";
   postTitleDiv.innerText = gamePost.title;
   const postCategoryDiv = document.createElement("div");
   postCategoryDiv.className = "postCategory";
-  postCategoryDiv.innerText = `Category: ${gamePost.category}`; 
+  postCategoryDiv.innerText = `Category: ${gamePost.category}`;
   const postImageDiv = document.createElement("div");
   postImageDiv.className = "postImage";
   const categoryImg = document.createElement("img");
@@ -161,7 +183,7 @@ function createGamePostCard(gamePost) {
   /// Comments section for game posts ///
   const commentSectionDiv = document.createElement("div");
   commentSectionDiv.className = "commentSection";
-  // This will help with with toggling between display: "block" and 
+  // This will help with with toggling between display: "block" and
   // display: "none" for the comment section to its respective game post card
   commentSectionDiv.setAttribute("id", `commentSec_${gamePost._id}`);
   const commentPostContainerDiv = document.createElement("div");
@@ -204,11 +226,11 @@ function createGamePostCard(gamePost) {
   const commentsListDiv = document.createElement("div");
   commentsListDiv.className = "commentsList";
 
-  // If comments array in gamePost is not empty 
+  // If comments array in gamePost is not empty
   // we create a comment card for each comment
   // in comments array
   if (gamePost.comments.length) {
-    gamePost.comments.forEach(comment => {
+    gamePost.comments.forEach((comment) => {
       // We handle creating a comment card for each comments here
       const commentCardDiv = document.createElement("div");
       commentCardDiv.className = "commentCard";
@@ -265,7 +287,6 @@ function createGamePostCard(gamePost) {
   gamePostsRowDiv.appendChild(gamePostCardDiv);
   gamePostsContainer.appendChild(gamePostsRowDiv);
 
-
   // We initialize the display of the comment section (for each game post card)
   // to none and we add an event listener to the comment container to toggle
   // between display: "block" and display: "none"
@@ -273,12 +294,16 @@ function createGamePostCard(gamePost) {
   commentContainerDiv.addEventListener("click", () => {
     console.log("Clicked");
     console.log("ObjectID", gamePost._id);
-    if (document.getElementById(`commentSec_${gamePost._id}`).style.display === "none") {
-      document.getElementById(`commentSec_${gamePost._id}`).style.display = "block";
+    if (
+      document.getElementById(`commentSec_${gamePost._id}`).style.display ===
+      "none"
+    ) {
+      document.getElementById(`commentSec_${gamePost._id}`).style.display =
+        "block";
+    } else {
+      document.getElementById(`commentSec_${gamePost._id}`).style.display =
+        "none";
     }
-    else {
-      document.getElementById(`commentSec_${gamePost._id}`).style.display = "none";
-    } 
   });
 }
 

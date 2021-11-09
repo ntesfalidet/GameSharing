@@ -33,9 +33,7 @@
         <li>GameSharing</li>
       </ul>
       <ul id="welcomeUser">
-        <li>
-          Welcome to GameSharing
-        </li>
+        <li>Welcome to GameSharing</li>
       </ul>
       <ul id="navRightItems">
         <li>
@@ -48,11 +46,20 @@
         <div class="row createPostRow">
           <div class="col-md-6 offset-md-3 createPostContainer">
             <div class="createPostTitle">Create a game post</div>
-            <form id="createGamePostForm" action="/createGamePost" method="POST">
+            <form
+              id="createGamePostForm"
+              action="/createGamePost"
+              method="POST"
+            >
               <div class="titleCategoryContainer">
                 <div class="titleSection">
                   <label class="form-label"
-                    >Title<input class="form-control" type="text" name="title" placeholder="Enter title here" required
+                    >Title<input
+                      class="form-control"
+                      type="text"
+                      name="title"
+                      placeholder="Enter title here"
+                      required
                   /></label>
                 </div>
                 <div class="categorySection">
@@ -81,7 +88,14 @@
               <div class="descriptionPostContainer">
                 <div class="descriptionSection">
                   <label class="form-label"
-                    >Description<textarea class="form-control" cols="50" rows="2" name="description" placeholder="Enter description here" required></textarea>
+                    >Description<textarea
+                      class="form-control"
+                      cols="50"
+                      rows="2"
+                      name="description"
+                      placeholder="Enter description here"
+                      required
+                    ></textarea>
                   </label>
                 </div>
                 <div class="postButtonSection">
@@ -94,14 +108,11 @@
           </div>
         </div>
         <div class="sharedGamePostsSection">
-          <div class="sharedGamePostsTitle">
-            Shared Game Posts
-          </div>
-          <hr>
+          <div class="sharedGamePostsTitle">Shared Game Posts</div>
+          <hr />
         </div>
         <!-- Serves as a container to the game posts list -->
-        <div id="gamePostsContainer">
-        </div>
+        <div id="gamePostsContainer"></div>
       </div>
     </main>
     <script

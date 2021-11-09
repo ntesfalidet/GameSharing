@@ -14,11 +14,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(session({
-  secret: "maintain logged in user name", // encrypts information for us regarding user name
-  resave: false,  // we don't resave our session variables
-  saveUninitialized: true,
-}));
+app.use(
+  session({
+    secret: "maintain logged in user name", // encrypts information for us regarding user name
+    resave: false, // we don't resave our session variables
+    saveUninitialized: true,
+  })
+);
 
 app.use("/", indexRouter);
 

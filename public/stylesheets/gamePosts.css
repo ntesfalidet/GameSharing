@@ -1,3 +1,5 @@
+/* Styles for the gamePosts page */
+
 .navbar-light {
   display: flex;
   justify-content: space-between;
@@ -20,7 +22,7 @@
 }
 
 #controllerImage {
-  width: 50px; 
+  width: 50px;
   height: 50px;
 }
 
@@ -36,6 +38,14 @@
 }
 
 /* CSS for creating game post form */
+.noGamePosts {
+  text-align: center;
+  font-size: 40px;
+  color: #a3a3a3;
+  font-weight: 600;
+  font-style: italic;
+}
+
 .createPostContainer {
   border: 2px solid gainsboro;
   border-radius: 10px;
@@ -112,27 +122,27 @@
 }
 
 .gamePostSection {
-  border: 3px solid gainsboro; 
+  border: 3px solid gainsboro;
   border-radius: 10px;
 }
 
 .postUser {
-  padding-top: 8px; 
-  padding-left: 15px; 
-  font-style: italic; 
-  color: #8e8e8e; 
-  font-size: 18px; 
+  padding-top: 8px;
+  padding-left: 15px;
+  font-style: italic;
+  color: #8e8e8e;
+  font-size: 18px;
 }
 
 .postTitle {
-  text-align: center; 
-  font-size: 50px; 
+  text-align: center;
+  font-size: 50px;
   font-weight: 550;
 }
 
 .postCategory {
-  text-align: center; 
-  font-size: 30px; 
+  text-align: center;
+  font-size: 30px;
   font-style: italic;
 }
 
@@ -143,7 +153,7 @@
 }
 
 .postImage img {
-  width: 300px;  
+  width: 300px;
 }
 
 .postDescription {
@@ -157,15 +167,15 @@
 }
 
 .hrClass {
-  padding-left: 30px; 
-  padding-right: 30px; 
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /* This class serves as a container for the like, dislike and comment elements */
 .lastSection {
-  display: flex; 
-  justify-content: space-between; 
-  padding-left: 60px; 
+  display: flex;
+  justify-content: space-between;
+  padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 12px;
 }
@@ -211,9 +221,9 @@
 /* CSS for the comment section of a game post */
 .commentSection {
   display: none;
-  margin-right: 10px; 
-  margin-left: 10px; 
-  box-shadow: 0px 1px 6px 2px #888888; 
+  margin-right: 10px;
+  margin-left: 10px;
+  box-shadow: 0px 1px 6px 2px #888888;
   border-radius: 5px;
 }
 
@@ -279,5 +289,3 @@
   font-weight: 600;
   font-style: italic;
 }
-
-

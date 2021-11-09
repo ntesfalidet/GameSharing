@@ -25,7 +25,7 @@ function gameSharingDB() {
       console.log("Connected to game-sharing-db");
       const db = client.db(DB_NAME);
       const gamePostsCollection = db.collection("users");
-      // returns the array of users in users collection that match 
+      // returns the array of users in users collection that match
       // the passed in user query
       return await gamePostsCollection.find(user).toArray();
     } catch (error) {
@@ -49,7 +49,7 @@ function gameSharingDB() {
       console.log("Connected to game-sharing-db");
       const db = client.db(DB_NAME);
       const gamePostsCollection = db.collection("users");
-      // returns the array of users in users collection that match 
+      // returns the array of users in users collection that match
       // the passed in userName query
       return await gamePostsCollection.find(userName).toArray();
     } catch (error) {
@@ -60,8 +60,7 @@ function gameSharingDB() {
     }
   };
 
-
-  // This function is responsible for registering a new user in database 
+  // This function is responsible for registering a new user in database
   // We pass in user (containing userName and password) from server-side to insert into
   // the users collection
   gameSharingDB.registerUser = async function (user) {
@@ -132,7 +131,7 @@ function gameSharingDB() {
     }
   };
 
-  // Set the likes fields of a gamePost document with updatedLikes 
+  // Set the likes fields of a gamePost document with updatedLikes
   // based on the ID of gamePost
   gameSharingDB.likeGamePost = async function (gamePostID, updatedLikes) {
     console.log("Like game post called");
@@ -144,10 +143,10 @@ function gameSharingDB() {
       console.log("Connected to game-sharing-db");
       const db = client.db(DB_NAME);
       const gamePostsCollection = db.collection("gameposts");
-      // returns the response of updating a gamePost document 
-      // (based on its ID)  
+      // returns the response of updating a gamePost document
+      // (based on its ID)
       return await gamePostsCollection.updateOne(
-        { _id: new ObjectId(gamePostID) }, 
+        { _id: new ObjectId(gamePostID) },
         { $set: { likes: updatedLikes } }
       );
     } catch (error) {
@@ -158,7 +157,7 @@ function gameSharingDB() {
     }
   };
 
-  // Set the dislikes field of a gamePost document with updatedDislikes 
+  // Set the dislikes field of a gamePost document with updatedDislikes
   // based on the ID of gamePost
   gameSharingDB.dislikeGamePost = async function (gamePostID, updatedDislikes) {
     console.log("Dislike game post called");
@@ -170,10 +169,10 @@ function gameSharingDB() {
       console.log("Connected to game-sharing-db");
       const db = client.db(DB_NAME);
       const gamePostsCollection = db.collection("gameposts");
-      // returns the response of updating dislike field of a gamePost document 
-      // (based on its ID)  
+      // returns the response of updating dislike field of a gamePost document
+      // (based on its ID)
       return await gamePostsCollection.updateOne(
-        { _id: new ObjectId(gamePostID) }, 
+        { _id: new ObjectId(gamePostID) },
         { $set: { dislikes: updatedDislikes } }
       );
     } catch (error) {
@@ -184,7 +183,7 @@ function gameSharingDB() {
     }
   };
 
-  // Append the gamePostComment to the comments field of a gamePost document  
+  // Append the gamePostComment to the comments field of a gamePost document
   // based on the ID of gamePost
   gameSharingDB.commentGamePost = async function (gamePostID, gamePostComment) {
     console.log("Dislike game post called");
@@ -196,10 +195,10 @@ function gameSharingDB() {
       console.log("Connected to game-sharing-db");
       const db = client.db(DB_NAME);
       const gamePostsCollection = db.collection("gameposts");
-      // returns the response of updating comments field of a gamePost document 
-      // (based on its ID)  
+      // returns the response of updating comments field of a gamePost document
+      // (based on its ID)
       return await gamePostsCollection.updateOne(
-        { _id: new ObjectId(gamePostID) }, 
+        { _id: new ObjectId(gamePostID) },
         { $push: { comments: gamePostComment } }
       );
     } catch (error) {
@@ -209,8 +208,6 @@ function gameSharingDB() {
       await client.close();
     }
   };
-
-
   return gameSharingDB;
 }
 

@@ -1,3 +1,5 @@
+/* Styles for the registration page */
+
 .registerRow {
   padding-bottom: 20px;
 }
@@ -21,7 +23,7 @@
 .registerError {
   text-align: center;
   margin-top: 3px;
-  margin-bottom: 3px; 
+  margin-bottom: 3px;
   color: red;
   display: none;
 }
