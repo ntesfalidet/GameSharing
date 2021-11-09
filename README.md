@@ -28,8 +28,7 @@ Nathaniel Tesfalidet
 
 ### How to run project:
 
-- Run the client of project by running `npm start` 
-- Run the server of project by running `mongod --dbpath ~/data/database` 
+- Run the project by running `npm start` 
 
 ## Screenshots
 
