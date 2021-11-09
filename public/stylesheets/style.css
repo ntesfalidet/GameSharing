@@ -1,0 +1,22 @@
+.welcomeSection {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 55px;
+}
+
+.welcomeTitle {
+  font-size: 85px;
+}
+
+.welcomeImages img {
+  width: 120px;
+  height: 120px;
+}
+
+#welcomeImage1 {
+  margin-right: 60px;
+}
+
+#welcomeImage2 {
+  margin-left: 60px;
+}

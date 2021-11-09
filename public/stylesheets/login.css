@@ -1,0 +1,43 @@
+.loginRow {
+  padding-bottom: 20px;
+}
+
+.loginContainer {
+  box-shadow: 1px 1px 4px #888888;
+  width: 450px;
+}
+
+#loginForm {
+  padding: 5px;
+}
+
+.loginTitle {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 510;
+  padding-top: 8px;
+}
+
+.loginError {
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 3px; 
+  color: red;
+  display: none;
+}
+
+.loginPassword {
+  padding-top: 5px;
+}
+
+.signInAndRegister {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.registerLink {
+  padding-top: 10px;
+}
+
+

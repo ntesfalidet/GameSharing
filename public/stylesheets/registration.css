@@ -1,0 +1,37 @@
+.registerRow {
+  padding-bottom: 20px;
+}
+
+.registerContainer {
+  box-shadow: 1px 1px 4px #888888;
+  width: 450px;
+}
+
+#registerForm {
+  padding: 5px;
+}
+
+.registerTitle {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 510;
+  padding-top: 8px;
+}
+
+.registerError {
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 3px; 
+  color: red;
+  display: none;
+}
+
+.registerPassword {
+  padding-top: 5px;
+}
+
+.registerSection {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  text-align: center;
+}

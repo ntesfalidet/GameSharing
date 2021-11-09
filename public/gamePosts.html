@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nathaniel Tesfalidet" />
+    <meta
+      name="description"
+      content="This serves as the game posts page for the GameSharing website"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <title>GameSharing</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/gamePosts.css" />
+    <link rel="icon" type="image/png" href="/images/computer_icon.png" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+      <ul id="navLeftItems">
+        <li>
+          <img
+            id="controllerImage"
+            src="/images/controller_icon.png"
+            alt="controllerIcon"
+          />
+        </li>
+        <li>GameSharing</li>
+      </ul>
+      <ul id="welcomeUser">
+        <li>
+          Welcome to GameSharing
+        </li>
+      </ul>
+      <ul id="navRightItems">
+        <li>
+          <a href="index.html" class="btn btn-primary" role="button">Logout</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="row createPostRow">
+          <div class="col-md-6 offset-md-3 createPostContainer">
+            <div class="createPostTitle">Create a game post</div>
+            <form id="createGamePostForm" action="/createGamePost" method="POST">
+              <div class="titleCategoryContainer">
+                <div class="titleSection">
+                  <label class="form-label"
+                    >Title<input class="form-control" type="text" name="title" placeholder="Enter title here" required
+                  /></label>
+                </div>
+                <div class="categorySection">
+                  <label for="categorySelectId">Category</label>
+                  <select
+                    class="form-select"
+                    type="form-control"
+                    id="categorySelectId"
+                    name="category"
+                  >
+                    <option selected>Adventure</option>
+                    <option>Battle Royale</option>
+                    <option>Fighting</option>
+                    <option>Platform</option>
+                    <option>Racing</option>
+                    <option>Rhythm</option>
+                    <option>RPG</option>
+                    <option>Sandbox</option>
+                    <option>Shooter</option>
+                    <option>Stealth</option>
+                    <option>Strategy</option>
+                    <option>Survival</option>
+                  </select>
+                </div>
+              </div>
+              <div class="descriptionPostContainer">
+                <div class="descriptionSection">
+                  <label class="form-label"
+                    >Description<textarea class="form-control" cols="50" rows="2" name="description" placeholder="Enter description here" required></textarea>
+                  </label>
+                </div>
+                <div class="postButtonSection">
+                  <button type="submit" class="btn btn-success">
+                    Create game post
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="sharedGamePostsSection">
+          <div class="sharedGamePostsTitle">
+            Shared Game Posts
+          </div>
+          <hr>
+        </div>
+        <!-- Serves as a container to the game posts list -->
+        <div id="gamePostsContainer">
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascripts/gamePostsClient.js"></script>
+  </body>
+</html>

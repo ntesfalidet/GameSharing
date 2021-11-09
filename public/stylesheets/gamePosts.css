@@ -1,0 +1,283 @@
+.navbar-light {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+}
+
+.navbar-light ul {
+  margin: 0;
+  list-style: none;
+}
+
+.navbar-light ul li {
+  display: inline-block;
+}
+
+#navLeftItems {
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#controllerImage {
+  width: 50px; 
+  height: 50px;
+}
+
+#welcomeUser {
+  padding-left: 0px;
+  padding-right: 35px;
+  font-size: 25px;
+  font-weight: 550;
+}
+
+#navRightItems {
+  padding-right: 20px;
+}
+
+/* CSS for creating game post form */
+.createPostContainer {
+  border: 2px solid gainsboro;
+  border-radius: 10px;
+}
+
+.createPostTitle {
+  font-size: 20px;
+  padding-left: 35px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+.titleCategoryContainer {
+  display: flex;
+  padding-right: 10%;
+}
+
+.titleSection {
+  padding-left: 10%;
+}
+
+.categorySection {
+  padding-left: 22%;
+  padding-right: 3%;
+}
+
+#categorySelectId {
+  width: 170px;
+}
+
+.descriptionPostContainer {
+  padding-right: 10%;
+}
+
+.descriptionSection {
+  padding-left: 10%;
+}
+
+.postButtonSection {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 7%;
+}
+
+/* CSS for shared game posts title */
+.sharedGamePostsSection {
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 5px;
+}
+
+.sharedGamePostsTitle {
+  padding-bottom: 10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.sharedGamePostsSection hr {
+  width: 300px;
+  margin: auto;
+}
+
+/* CSS for each game post card */
+#gamePostsContainer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.gamePostsRow {
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+.gamePostSection {
+  border: 3px solid gainsboro; 
+  border-radius: 10px;
+}
+
+.postUser {
+  padding-top: 8px; 
+  padding-left: 15px; 
+  font-style: italic; 
+  color: #8e8e8e; 
+  font-size: 18px; 
+}
+
+.postTitle {
+  text-align: center; 
+  font-size: 50px; 
+  font-weight: 550;
+}
+
+.postCategory {
+  text-align: center; 
+  font-size: 30px; 
+  font-style: italic;
+}
+
+.postImage {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.postImage img {
+  width: 300px;  
+}
+
+.postDescription {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.hrClass {
+  padding-left: 30px; 
+  padding-right: 30px; 
+}
+
+/* This class serves as a container for the like, dislike and comment elements */
+.lastSection {
+  display: flex; 
+  justify-content: space-between; 
+  padding-left: 60px; 
+  padding-right: 60px;
+  padding-bottom: 12px;
+}
+
+#likeGamePostForm {
+  display: flex;
+}
+
+.likeImageClass {
+  height: 40px;
+  width: 40px;
+}
+
+.likeCounter {
+  padding-left: 8px;
+  font-size: 30px;
+}
+
+.commentContainer {
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.commentContainer img {
+  width: 40px;
+}
+
+#dislikeGamePostForm {
+  display: flex;
+}
+
+.dislikeImageClass {
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+}
+
+.dislikeCounter {
+  padding-left: 8px;
+  font-size: 30px;
+}
+
+/* CSS for the comment section of a game post */
+.commentSection {
+  display: none;
+  margin-right: 10px; 
+  margin-left: 10px; 
+  box-shadow: 0px 1px 6px 2px #888888; 
+  border-radius: 5px;
+}
+
+.createCommentSection {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+
+.commentButtonContainer {
+  padding-top: 15px;
+}
+
+#commentHR {
+  width: 90%;
+  margin-bottom: 15px;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.commentsList {
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 15px;
+}
+
+.commentCard {
+  border: 2px solid gainsboro;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.commentUserDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.commentUser {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.commentDate {
+  padding-top: 3px;
+  font-style: italic;
+  color: #9b9b9b;
+}
+
+.commentMessage {
+  padding: 8px;
+  font-style: italic;
+}
+
+.noComments {
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  color: #a3a3a3;
+  font-weight: 600;
+  font-style: italic;
+}
+
+
