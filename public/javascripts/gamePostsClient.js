@@ -1,6 +1,7 @@
 // Holds the container for all the game posts
 const gamePostsContainer = document.querySelector("#gamePostsContainer");
 
+// Yuanyuan: It is interesting that you have add image with category, which leads your page looks more vivid. Good job!
 // Images object contains key value pairs associating the category name (as the key) with
 // the image name (as the value)
 const images = {
