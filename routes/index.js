@@ -4,6 +4,7 @@ const gameSharingDB = require("../database/gameSharingDB.js");
 
 /// Routes for users ///
 
+// Yuanyuan: Very detailed comment! It is impressive that you have added comment time part so detailed. Good job!
 // user login route
 router.post("/loginUser", async function (req, res) {
   // Contains the name and password of user from login
