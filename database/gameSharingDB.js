@@ -6,6 +6,9 @@ dotenv.config();
 const URL = process.env.MONGO_URL || "mongodb://localhost:27017";
 const DB_NAME = "game-sharing-db";
 
+// Yuanyuan: It is very helpful that you have put very detailed comment. Easy to read and follow. 
+// Yuanyuan: It is amazing that you have designed a such complete project just by yourself. Everything here is very organized.
+// Yuanyuan: Pretty good job!
 function gameSharingDB() {
   // Store database operations/functions in gameSharingDB JSON object
   const gameSharingDB = {};
