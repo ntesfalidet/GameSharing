@@ -37,3 +37,5 @@ Nathaniel Tesfalidet
 ![Game posts page screenshot 1](./public/images/screenshots/GamePostsScreenshot1.jpg)
 ![Game posts page screenshot 2](./public/images/screenshots/GamePostsScreenshot2.jpg)
 ![Game posts page screenshot 3](./public/images/screenshots/GamePostsScreenshot3.jpg)
+
+--Yuanyuan: Really like your project's topic! The way how you put relevant link is very clean and cool. It will be better if you can put the class link here. (I remember the TA has mentioned that in slack, but not very sure about this point.) Overall very good job! --
