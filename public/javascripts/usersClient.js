@@ -1,5 +1,5 @@
 console.log("usersClient.js called");
-
+// Yuanyuan: The comment here is very detailed and let the code easy to follow. Everything is very orgianized. Good job!
 /// Frontend functionalities for user login and registration ///
 const loginForm = document.getElementById("loginForm");
 const loginError = document.getElementsByClassName("loginError")[0];
